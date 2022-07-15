@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon aria-hidden="false" aria-label="Example home icon">newspaper</mat-icon>
+    <span style="margin-left: 0.4%"><i>NewsApp</i></span>
+    <span fxShow="true" fxHide.lt-md>
+      <button *ngIf="!auth.isTokenExpired()" class="search-button" mat-button class="search-button"
+        [routerLink]="['/news/search']">
+        <b><i>Search</i></b>
+      </button>
+      <button *ngIf="!auth.isTokenExpired()" mat-button [routerLink]="['/news/top']">
+        <b><i>Top</i></b>
+      </button>
+      <button *ngIf="!auth.isTokenExpired()" class="fav-button" mat-button [routerLink]="['/news/favourites']">
+        <b><i>Favourites</i></b>
+      </button>
+    </span>
+    <span class="menu-spacer"></span>
+    <span *ngIf="!auth.isTokenExpired()" fxShow="true" fxHide.lt-md>
+      <button color="warn" class="logout" mat-button (click)="logout()">
+        <mat-icon matSuffix>logout</mat-icon>
+      </button>
+    </span>
+    <span *ngIf="auth.isTokenExpired()" fxShow="true" fxHide.lt-md>
+      <button class="btn" mat-button [routerLink]="['/login']"><i>Login</i></button>
+    </span>
+    <span *ngIf="auth.isTokenExpired()" fxShow="true" fxHide.lt-md>
+      <button class="btn" mat-button [routerLink]="['/register']"><i>Register</i></button>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a *ngIf="!auth.isTokenExpired()" mat-list-item [routerLink]="['/news/top']">Top</a>
+      <a *ngIf="!auth.isTokenExpired()" mat-list-item [routerLink]="['/news/favourites']">Favourites</a>
+      <a *ngIf="!auth.isTokenExpired()" mat-list-item [routerLink]="['/news/search']">Search</a>
+      <a *ngIf="!auth.isTokenExpired()" mat-list-item (click)="logout()">Logout</a>
+      <a *ngIf="auth.isTokenExpired()" mat-list-item [routerLink]="['/login']">Login</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

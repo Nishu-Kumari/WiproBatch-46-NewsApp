@@ -1,0 +1,38 @@
+.login-block {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.login-input-full-width {
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  background-image: url("/assets/img/bgimg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+
+/* 1em=16px */
+.shadowbox {
+  width: 15em;
+  border: 0.2rem outset skyblue;
+  border-radius: 10px;
+  background-color: aliceblue;
+}

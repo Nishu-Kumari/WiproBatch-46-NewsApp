@@ -1,0 +1,12 @@
+:host {
+  height: 100vh;
+}
+
+.news-container {
+  width: 95vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 86vh;
+  overflow-x: visible;
+}

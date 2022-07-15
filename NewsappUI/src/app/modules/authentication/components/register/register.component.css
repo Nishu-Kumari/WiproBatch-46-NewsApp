@@ -1,0 +1,42 @@
+.shadowbox {
+  width: 15em;
+  border: 0.2rem outset skyblue;
+  border-radius: 12px;
+  background-color: aliceblue;
+}
+
+.register-block {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  padding-top: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
+  height: 100%;
+}
+
+.register-input-full-width {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.align {
+  width: 27%;
+}
+
+body {
+  background-image: url("/assets/img/bgimg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}

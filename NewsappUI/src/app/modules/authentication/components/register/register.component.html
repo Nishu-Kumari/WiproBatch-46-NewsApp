@@ -1,0 +1,44 @@
+<body>
+  <br /><br />
+  <form class="register-form" [formGroup]="registerForm" (ngSubmit)="registerUser()">
+    <div class="register-block shadowbox align">
+      <div class="row">
+        <div class="container text-center">
+          <img src="./assets/img/signup.png" height="30%" width="30%" alt="" />
+        </div>
+        <h2>User Registration</h2>
+      </div>
+      <div class="row">
+        <mat-form-field class="register-input-full-width">
+          <input matInput placeholder="First Name" id="firstName" formControlName="firstName" required />
+          <mat-error *ngIf="registerForm.get('firstName').errors?.required">First Name is mandatory</mat-error>
+        </mat-form-field>
+        <mat-form-field class="register-input-full-width">
+          <input id="lastName" matInput placeholder="Last Name" formControlName="lastName" required />
+          <mat-error *ngIf="registerForm.get('lastName').errors?.required">Last Name is mandatory</mat-error>
+        </mat-form-field>
+        <mat-form-field class="register-input-full-width">
+          <input id="userId" matInput placeholder="User Id" class="userId" formControlName="userId" required
+            minlength="5" maxlength="10" />
+          <mat-error *ngIf="registerForm.get('userId').errors?.required">User Id is mandatory</mat-error>
+        </mat-form-field>
+        <mat-form-field class="register-input-full-width">
+          <input id="password" matInput placeholder="Password" class="password" formControlName="password"
+            type="password" required />
+          <mat-error *ngIf="registerForm.get('password').errors?.required">Password is mandatory</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <button class="register-user" type="submit" mat-raised-button color="primary">
+          Register
+        </button>
+        <button style="margin-left: 10px" type="reset" mat-raised-button color="primary">
+          Clear
+        </button>
+      </div>
+      <br />
+      <a routerLink="/login">Already Member ? Click to Login</a>
+    </div>
+    <br /><br /><br />
+  </form>
+</body>

@@ -1,0 +1,14 @@
+.menu-spacer {
+    flex: 1 1 auto;
+}
+
+/* mouse over link */
+button:hover {
+    color: #ffba01;
+}
+
+.btn {
+    color: goldenrod;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: medium;
+}
